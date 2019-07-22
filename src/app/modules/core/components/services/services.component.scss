@@ -1,0 +1,33 @@
+$bp-medium: 50em; //800px
+
+section {
+  .heading__secondary {
+    font-family: var(--font-text-heavy);
+    font-size: 4rem;
+    letter-spacing: -2px;
+    color: var(--color-secondary);
+    margin: 6rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  div {
+    display: grid;
+    grid-template-columns:
+      [full-start] 10rem [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 18rem) [col-end]
+      )
+      [center-end] 10rem [full-end];
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns:
+        [full-start] 4rem [center-start] repeat(
+          8,
+          [col-start] minmax(min-content, 18rem) [col-end]
+        )
+        [center-end] 4rem [full-end];
+    }
+    & > * {
+      grid-column: center-start / center-end;
+    }
+  }
+}

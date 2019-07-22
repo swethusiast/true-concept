@@ -1,0 +1,19 @@
+<section>
+  <h2 class="heading__secondary">
+    We Help Through
+  </h2>
+  <div>
+    <app-service-details
+      [service]="selectedService"
+      (saved)="saveService($event)"
+    >
+    </app-service-details>
+
+    <app-service-list
+      [services]="services$ | async"
+      (selected)="selectService($event)"
+      (deleted)="deleteService($event)"
+    >
+    </app-service-list>
+  </div>
+</section>

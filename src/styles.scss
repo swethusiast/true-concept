@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: MyriadProRegular;
+  src: url(./assets/font/MyriadProRegular.ttf);
+}
+
+@font-face {
+  font-family: SanFranciscoDisplay-Black;
+  src: url(./assets/font/SanFranciscoDisplay-Black.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoDisplay-Bold;
+  src: url(./assets/font/SanFranciscoDisplay-Bold.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoDisplay-Light;
+  src: url(./assets/font/SanFranciscoDisplay-Light.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoDisplay-Regular;
+  src: url(./assets/font/SanFranciscoDisplay-Regular.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoText-Heavy;
+  src: url(./assets/font/SanFranciscoText-Heavy.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoText-Medium;
+  src: url(./assets/font/SanFranciscoText-Medium.otf);
+}
+@font-face {
+  font-family: SanFranciscoText-Regular;
+  src: url(./assets/font/SanFranciscoText-Regular.otf);
+}
+
+:root {
+  --text-color-light: #fff;
+  --text-color-dark: rgba(255, 255, 255, 0.7);
+  --color-primary: #1272b8;
+  --color-secondary: #353535;
+  --color-bg-light: #989898;
+  --font-display-black: SanFranciscoDisplay-Black;
+  --font-display-bold: SanFranciscoDisplay-Bold;
+  --font-display-light: SanFranciscoDisplay-Light;
+  --font-display-regular: SanFranciscoDisplay-Regular;
+  --font-text-heavy: SanFranciscoText-Heavy;
+  --font-text-medium: SanFranciscoText-Medium;
+  --font-text-regular: SanFranciscoText-Regular;
+  --font-myriad: MyriadProRegular;
+}
+
+//responsive breakpoints
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  color: var(--text-color-light);
+}
+.highlight {
+  background-color: var(--color-primary);
+}

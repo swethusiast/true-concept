@@ -1,0 +1,12 @@
+<div class="card">
+  <div (click)="selected.emit(service)" *ngFor="let service of services">
+    <div class="card__body">
+      <button
+        (click)="deleted.emit(service); $event.stopImmediatePropagation()"
+      >
+        &#935;
+      </button>
+      <h3 class="card__title">{{ service.title }}</h3>
+    </div>
+  </div>
+</div>
